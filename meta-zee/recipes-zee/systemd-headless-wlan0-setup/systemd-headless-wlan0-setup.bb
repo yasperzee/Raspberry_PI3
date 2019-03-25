@@ -18,7 +18,7 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 # SYSTEMD_AUTO_ENABLE = "enable"
 
 SRC_URI += "file://25-wireless.network \
-            file://wpa_supplicant.conf-mir \
+            file://wpa_supplicant.conf-zee \
             file://wpa_supplicant@wlan0.service \
            "
 
@@ -26,7 +26,7 @@ S = "${WORKDIR}"
 
 do_install() {
 		 install -d ${D}${sysconfdir}/wpa_supplicant
-		 install -m 777 wpa_supplicant.conf-mir ${D}${sysconfdir}/wpa_supplicant/wpa_supplicant.conf
+		 install -m 777 wpa_supplicant.conf-zee ${D}${sysconfdir}/wpa_supplicant/wpa_supplicant.conf
 		 install -d ${D}${sysconfdir}/systemd/network
 		 install -m 777 25-wireless.network ${D}${sysconfdir}/systemd/network
 		 install -d ${D}${sysconfdir}/systemd/system
