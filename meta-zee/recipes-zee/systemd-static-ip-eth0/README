@@ -1,0 +1,5 @@
+
+Added file 20-wired-network, static IP for ETH0 when systemd used instead of sysvinit
+
+On target copy to:
+/etc/systemd/network/20-wired.network

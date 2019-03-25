@@ -1,0 +1,28 @@
+# meta-zee
+ctrl_interface=/var/run/wpa_supplicant
+ctrl_interface_group=0
+update_config=1
+
+#network={
+#    ssid="Koti_3B8C"
+#    psk="9EX9FF3KVKEW3"
+#    proto=RSN
+#    key_mgmt=WPA-PSK
+#    pairwise=CCMP
+#    auth_alg=OPEN
+#}
+
+network={
+    ssid="samsung s5"
+    psk="12345678"
+    proto=RSN
+    key_mgmt=WPA-PSK
+    pairwise=CCMP
+    auth_alg=OPEN
+}
+
+# open network
+#network={
+#    key_mgmt=NONE
+#    ssid="<ssid>"
+#}

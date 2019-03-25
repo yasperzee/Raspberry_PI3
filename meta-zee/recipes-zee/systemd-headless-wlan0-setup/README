@@ -1,0 +1,7 @@
+
+wlan0 setup on systemd.
+
+create templates and copy:
+/etc/wpa_supplicant/wpa_supplicant.conf
+/etc/systemd/network/25-wireless.network
+/etc/systemd/system/wpa_supplicant@wlan0.service:
