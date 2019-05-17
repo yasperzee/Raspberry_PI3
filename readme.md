@@ -1,2 +1,2 @@
 meta-zee
-Yocto Project (YP) layers for raspberry pi 3
+Yocto Project (YP) layers for raspberry pi3
