@@ -8,12 +8,15 @@
 #
 # TODO: Devel.Branch:
 #       Remove sysvinit completly
-#       -> Wifi, Bluetooth, mosquitto, firewall more "systemd compliant"
+#       -> Bluetooth, mosquitto, firewall more "systemd compliant"
+#
+# v0.3  yasperzee   5'19    YP2.7 -WARRIOR Migrate
 #
 # v0.2  yasperzee   3'19    sysvinit --> systemd
 #
 # v0.1  yasperzee   3'19    THUD integration (new approach...)
 #       for 1.build ref. is console-image by jumpnowtek. (sysvinit)
+#       Wifi
 #       VIRTUAL-RUNTIME_init_manager = "sysvinit"
 #       * support for buildhistory
 #       * support for force change root password.

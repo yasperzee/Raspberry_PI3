@@ -1,2 +1,2 @@
 meta-zee
-Yocto Project (YP) layers for raspberry pi3
+Yocto Project (YP) 2.7- WARRIOR layers for raspberry pi3
