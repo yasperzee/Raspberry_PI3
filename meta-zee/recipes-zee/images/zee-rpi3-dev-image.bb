@@ -29,7 +29,6 @@ DEV_SDK_INSTALL = " \
     gdb \
     gdbserver \
     gettext \
-    git \
     ldd \
     libstdc++ \
     libstdc++-dev \

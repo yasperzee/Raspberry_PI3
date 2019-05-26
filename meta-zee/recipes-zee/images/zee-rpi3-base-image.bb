@@ -7,7 +7,7 @@
 # TODO:         Bluetooth
 # TODO:         64-bit ( Branch )
 #
-# yasperzee v0.2    3'19    sysvinit --> systemd			
+# yasperzee v0.2    3'19    sysvinit --> systemd
 #                   - Static ip address for eth0
 #                   - Headless system:  Autostart for wlan0 on 1. boot and
 #                                       wpa_supplicant for systemd.
@@ -76,6 +76,7 @@ TOOLS_INSTALL = " \
     rng-tools \
     rndaddtoentcnt \
     python3 \
+    git \
 "
 
 IMAGE_INSTALL += " \
@@ -95,13 +96,14 @@ disable_bootlogd() {
     echo BOOTLOGD_ENABLE=no > ${IMAGE_ROOTFS}/etc/default/bootlogd
 }
 
+# systemd: enable and autostart wpa_suppicant@wlan0 on first boot ( headless system)
+autorun_wlan0() {
+   ln -sf ${IMAGE_ROOTFS}/etc/systemd/system/wpa_supplicant@wlan0.service \
+   ${IMAGE_ROOTFS}/etc/systemd/system/multi-user.target.wants/wpa_supplicant@wlan0.service
+}
+
 ROOTFS_POSTPROCESS_COMMAND += " \
 set_local_timezone ; \
 disable_bootlogd ; \
+autorun_wlan0 ; \
 "
-
-# systemd: autostart wpa_suppicant@wlan0 on first boot ( headless system)
-#autorun_wlan0() {
-#   ln -sf ${IMAGE_ROOTFS}/etc/systemd/system/wpa_supplicant@wlan0.service \
-#   ${IMAGE_ROOTFS}/etc/systemd/system/multi-user.target.wants/wpa_supplicant@wlan0.service
-#}
