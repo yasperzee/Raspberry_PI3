@@ -4,7 +4,7 @@ Name=eth0
 [Network]
 #DHCP=yes
 #DHCP=v4
-# static IP
+# static IP home LAN
 # 192.168.10.52 netmask 255.255.255.0
 Address=192.168.10.52/24
 Gateway=192.168.10.1

@@ -7,6 +7,8 @@
 # TODO:         Bluetooth
 # TODO:         64-bit ( Branch )
 #
+# yasperzee v0.3    2'20 YP3.0-Zeus migration
+#
 # yasperzee v0.2    3'19    sysvinit --> systemd
 #                   - Static ip address for eth0
 #                   - Headless system:  Autostart for wlan0 on 1. boot and
@@ -32,26 +34,25 @@ COMPATIBLE_MACHINE = "^rpi$"
 IMAGE_LINGUAS   = " "
 
 # PACKAGE_EXCLUDE = " "
-
 ZEE_STUFF = " \
    systemd-static-ip-eth0 \
    systemd-headless-wlan0-setup \
 "
-#
-#   systemd-static-ip-wlan0 \
-#
 
 CORE_OS = " \
     kernel-modules \
     packagegroup-core-boot \
     tzdata \
 "
+
 WIFI_SUPPORT = " \
     crda \
     iw \
+    linux-firmware-rpidistro-bcm43430 \
+    linux-firmware-rpidistro-bcm43455 \
     wpa-supplicant \
-    linux-firmware-raspbian \
 "
+
 NETWORK_TOOLS = " \
     ethtool \
     iperf3 \
@@ -105,5 +106,7 @@ autorun_wlan0() {
 ROOTFS_POSTPROCESS_COMMAND += " \
 set_local_timezone ; \
 disable_bootlogd ; \
-autorun_wlan0 ; \
 "
+#
+# autorun_wlan0 ; \
+#

@@ -3,7 +3,7 @@ Name=wlan0
 [Network]
 #DHCP=yes
 #DHCP=v4
-# static IP
-Address=192.168.43.61/24
-Gateway=192.168.43.1
-DNS=192.168.43.1
+# static IP home WiFi
+Address=192.168.10.61/24
+Gateway=192.168.10.1
+DNS=192.168.10.1

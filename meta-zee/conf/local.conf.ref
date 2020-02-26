@@ -10,7 +10,7 @@
 #       Remove sysvinit completly
 #       -> Bluetooth, mosquitto, firewall more "systemd compliant"
 #
-# v0.3  yasperzee   5'19    YP2.7 -WARRIOR Migrate
+# v0.3  yasperzee   5'19    YP2.7 - WARRIOR Migrate
 #
 # v0.2  yasperzee   3'19    sysvinit --> systemd
 #
@@ -34,7 +34,7 @@
 #*******************************************************************************
 LICENSE_FLAGS_WHITELIST =   "commercial"
 DISTRO_FEATURES_append  =   " wifi"
-#DISTRO_FEATURES_append  =   " bluetooth bluez5"
+#DISTRO_FEATURES_append  =  " bluetooth bluez5"
 
 #VIRTUAL-RUNTIME_init_manager = "sysvinit"
 ########################  sysvinit to systemd  #################################
@@ -42,7 +42,7 @@ DISTRO_FEATURES_append       = " systemd"
 VIRTUAL-RUNTIME_init_manager = "systemd"
 # You can also prevent the SysVinit distribution feature from being
 # automatically enabled as follows: This removes any redundant SysVinit scripts.
-#DISTRO_FEATURES_BACKFILL_CONSIDERED = "sysvinit"
+DISTRO_FEATURES_BACKFILL_CONSIDERED = "sysvinit"
 # To remove initscripts (clear /etc/init.d) from your image altogether,
 # set this variable also:
 #VIRTUAL-RUNTIME_initscripts = " "

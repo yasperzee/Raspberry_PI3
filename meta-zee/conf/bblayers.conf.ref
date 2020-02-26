@@ -1,6 +1,10 @@
 # POKY_BBLAYERS_CONF_VERSION is increased each time build/conf/bblayers.conf changes incompatibly
 POKY_BBLAYERS_CONF_VERSION = "2"
 #
+# version 7     yasperzee   02'20   YP3.0-ZEUS migrate
+#
+# version 6     yasperzee   05'19   location of meta-zee changed
+#
 # version 5     yasperzee   05'19   YP2.7-WARRIOR migrate
 #
 # version 4     yasperzee   03'19   project structure change
@@ -11,13 +15,13 @@ POKY_BBLAYERS_CONF_VERSION = "2"
 #               reference: meta-rpi by jumpnowtek
 #
 BBLAYERS ?= " \
-    ${HOME}/yoctoproject/poky-warrior/meta \
-    ${HOME}/yoctoproject/poky-warrior/meta-poky \
-    ${HOME}/yoctoproject/poky-warrior/meta-openembedded/meta-oe \
-    ${HOME}/yoctoproject/poky-warrior/meta-openembedded/meta-multimedia \
-    ${HOME}/yoctoproject/poky-warrior/meta-openembedded/meta-networking \
-    ${HOME}/yoctoproject/poky-warrior/meta-openembedded/meta-python \
-    ${HOME}/yoctoproject/poky-warrior/meta-qt5 \
-    ${HOME}/yoctoproject/poky-warrior/meta-raspberrypi-master \
-    ${HOME}/projects/rpi3/meta-zee \
+    ${HOME}/yoctoproject/poky-zeus/meta \
+    ${HOME}/yoctoproject/poky-zeus/meta-poky \
+    ${HOME}/yoctoproject/poky-zeus/meta-openembedded/meta-oe \
+    ${HOME}/yoctoproject/poky-zeus/meta-openembedded/meta-multimedia \
+    ${HOME}/yoctoproject/poky-zeus/meta-openembedded/meta-networking \
+    ${HOME}/yoctoproject/poky-zeus/meta-openembedded/meta-python \
+    ${HOME}/yoctoproject/poky-zeus/meta-qt5 \
+    ${HOME}/yoctoproject/poky-zeus/meta-raspberrypi \
+    ${HOME}/working/Raspberry_PI3/meta-zee \
     "
