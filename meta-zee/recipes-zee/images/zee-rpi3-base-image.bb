@@ -36,8 +36,13 @@ IMAGE_LINGUAS   = " "
 # PACKAGE_EXCLUDE = " "
 ZEE_STUFF = " \
    systemd-static-ip-eth0 \
-   systemd-headless-wlan0-setup \
+   helloc \
+   hellocpp \
 "
+
+#
+#    systemd-headless-wlan0-setup \
+#
 
 CORE_OS = " \
     kernel-modules \
