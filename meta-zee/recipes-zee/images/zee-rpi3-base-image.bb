@@ -36,8 +36,6 @@ IMAGE_LINGUAS   = " "
 # PACKAGE_EXCLUDE = " "
 ZEE_STUFF = " \
    systemd-static-ip-eth0 \
-   helloc \
-   hellocpp \
 "
 
 #
